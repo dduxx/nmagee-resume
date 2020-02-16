@@ -82,7 +82,7 @@ In my spare time I manage a personal server for myself as well as my close frien
 currently hosting an application called NextCloud which acts as an alternative to Google Drive which I use to store
 all of my files and photos.
 
-**Exersise and Sports**\
+**Exercise and Sports**\
 I am an avid athlete having played several sports including Basketball, Rugby, and Soccer. In my spare time I 
 enjoy jogging, lifting weights, cycling, and downhill skiing.
 
