@@ -1,0 +1,202 @@
+% Copyright 2013 Christophe-Marie Duquesne <chmd@chmd.fr>
+% Copyright 2014 Mark Szepieniec <http://github.com/mszep>
+% 
+% ConText style for making a resume with pandoc. Inspired by moderncv.
+% 
+% This CSS document is delivered to you under the CC BY-SA 3.0 License.
+% https://creativecommons.org/licenses/by-sa/3.0/deed.en_US
+
+\startmode[*mkii]
+  \enableregime[utf-8]  
+  \setupcolors[state=start]
+\stopmode
+
+\setupcolor[hex]
+\definecolor[titlegrey][h=757575]
+\definecolor[sectioncolor][h=969696]
+\definecolor[rulecolor][h=314755]
+
+% Enable hyperlinks
+\setupinteraction[state=start, color=314755]
+
+\setuppapersize [A4][A4]
+\setuplayout    [width=middle, height=middle,
+                 backspace=20mm, cutspace=0mm,
+                 topspace=10mm, bottomspace=20mm,
+                 header=0mm, footer=0mm]
+
+%\setuppagenumbering[location={footer,center}]
+
+\setupbodyfont[11pt, helvetica]
+
+\setupwhitespace[medium]
+
+\setupblackrules[width=31mm, color=rulecolor]
+
+\setuphead[chapter]      [style=\tfd]
+\setuphead[section]      [style=\tfd\bf, color=titlegrey, align=middle]
+\setuphead[subsection]   [style=\tfb\bf, color=sectioncolor, align=right,
+                          before={\leavevmode\blackrule\hspace}]
+\setuphead[subsubsection][style=\bf]
+
+\setuphead[chapter, section, subsection, subsubsection][number=no]
+
+%\setupdescriptions[width=10mm]
+
+\definedescription
+  [description]
+  [headstyle=bold, style=normal,
+   location=hanging, width=18mm, distance=14mm, margin=0cm]
+
+\setupitemize[autointro, packed]    % prevent orphan list intro
+\setupitemize[indentnext=no]
+
+\setupfloat[figure][default={here,nonumber}]
+\setupfloat[table][default={here,nonumber}]
+
+\setuptables[textwidth=max, HL=none]
+\setupxtable[frame=off,option={stretch,width}]
+
+\setupthinrules[width=15em] % width of horizontal rules
+
+\setupdelimitedtext
+  [blockquote]
+  [before={\setupalign[middle]},
+   indentnext=no,
+  ]
+
+
+\starttext
+
+\section[title={Nathaniel Magee},reference={nathaniel-magee}]
+
+\startblockquote
+\useURL[url1][mailto:nmagee@unb.ca][][nmagee@unb.ca]\from[url1] • (506)
+232-2842 •
+\useURL[url2][https://www.linkedin.com/in/nathan-magee-188289140/][][LinkedIn]\from[url2]
+\stopblockquote
+
+\thinrule
+
+\startblockquote
+Software Engineer with 3 years of experience in software development. I
+have worked on several aspects of the development stack including
+back-end development, database design, cloud infrastructure deployment,
+and user interface development. I am a dedicated and enthusiastic
+developer who is eager to learn about and create new technologies.
+\stopblockquote
+
+\thinrule
+
+\subsection[title={Experience},reference={experience}]
+
+\startdescription{2018 - Present}
+  {\bf Software Engineer}, Akiri
+
+  Currently working at Akiri as a Software Engineer developing a
+  cloud-based platform to improve data liquidity in healthcare. The
+  Akiri platform allows users to manage, monitor, and audit the exchange
+  of medical data and securely share it using VPN technologies.
+
+  \startitemize[packed]
+  \item
+    Designed a system for processing and mass exporting of application
+    audit logs for customer HIPAA compliance reviews.
+  \item
+    Aided in the development of the user interface using Vue and
+    Vuetify.
+  \item
+    Investigated and implemented tools to improve the deployment of
+    infrastructure in development and production environments. This
+    included using tools such as Apex and Terraform to deploy Lambda,
+    SQS, DynamoDB, Kinesis, and S3 resources.
+  \item
+    Created integration and unit tests using JUnit, MockK, Cypress, and
+    PyTest.
+  \item
+    Developed back-end services using Java and Kotlin with Eclipse
+    Vert.X
+  \stopitemize
+\stopdescription
+
+\startdescription{2016 - 2017}
+  {\bf Software Developer}, Fiddlehead Technology
+
+  Worked as a Software Developer at Fiddlehead Technology aiding in the
+  development and support of Forecast Guardian, a tool designed to help
+  with forecasting and demand planning for food and beverage
+  manufacturers. Using statistical analysis Forecast Guardian would
+  provide insight into demand trends and help identify issues and errors
+  in the current forecasting methodologies.
+
+  \startitemize[packed]
+  \item
+    Aided in the redesign of the company's relational database and
+    migration from MySQL to Postgres.
+  \item
+    Designed tools for processing customer data, identifying anomalies,
+    and inserting the cleansed data for analysis.
+  \item
+    Designed a prototype web crawler to gather grocer flyer and sale
+    information to help with producing more accurate forecasts.
+  \item
+    Developed back-end services using Java, Dropwizard, and Hibernate.
+  \item
+    Created unit tests using JUnit and Selenium.
+  \stopitemize
+\stopdescription
+
+\subsection[title={Education},reference={education}]
+
+\startdescription{2013 - 2018}
+  {\bf Bachelor's in Computer Science}, University of New Brunswick
+
+  \startitemize[packed]
+  \item
+    Participated in the Co-Operative Education Program
+  \item
+    Graduated First Division
+  \stopitemize
+\stopdescription
+
+\subsection[title={Skills},reference={skills}]
+
+{\bf Programming Languages}\crlf
+Java, Kotlin, Python, JavaScript, SQL (MySQL, PSQL), Bash
+
+{\bf Web Technologies}\crlf
+Vue, Vuetify, REST, JSON, NodeJS, HTML, CSS, JQuery
+
+{\bf Developer Tools}\crlf
+GIT, Vim, IntelliJ, Eclipse, VSCode, GitHub, JIRA, Bitbucket, VirtualBox
+
+{\bf Build Tools}\crlf
+Gradle, Maven, Jenkins
+
+{\bf Cloud Platforms and Technologies}\crlf
+AWS, Docker, Terraform
+
+{\bf Operating Systems:}\crlf
+Linux, MacOS, Windows
+
+\subsection[title={Interests},reference={interests}]
+
+{\bf Computer Hardware}\crlf
+Over the years I have developed a keen interest in computer hardware and
+building computers. Currently I have built two gaming computers and a
+home server for myself as well as putting together parts list for
+several friends and relatives. I enjoy keeping up with the latest
+developments in computer hardware and gaming technologies.
+
+{\bf Software and Programming}\crlf
+In my spare time I manage a personal server for myself as well as my
+close friends and family. This server is currently hosting an
+application called NextCloud which acts as an alternative to Google
+Drive which I use to store all of my files and photos.
+
+{\bf Exercise and Sports}\crlf
+I am an avid athlete having played several sports including Basketball,
+Rugby, and Soccer. In my spare time I enjoy jogging, lifting weights,
+cycling, and downhill skiing.
+
+\stoptext
