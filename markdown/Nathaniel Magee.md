@@ -11,13 +11,6 @@
 
 ---
 
-## Education
-2013 - 2018
-:   **Bachelor's in Computer Science**, University of New Brunswick
-
-    * Participated in the Co-Operative Education Program
-    * Graduated First Division
-
 ## Experience
 2018 - Present
 :   **Software Engineer**, Akiri
@@ -49,6 +42,13 @@
     forecasts.
     * Developed back-end services using Java, Dropwizard, and Hibernate.
     * Created unit tests using JUnit and Selenium.
+
+## Education
+2013 - 2018
+:   **Bachelor's in Computer Science**, University of New Brunswick
+
+    * Participated in the Co-Operative Education Program
+    * Graduated First Division
 
 ## Skills
 
